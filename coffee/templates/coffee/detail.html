@@ -1,0 +1,18 @@
+{% extends "coffee/base.html" %}
+
+{% block content %}
+
+<h2>{{ order.description_text }}</h2>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'coffee:place_order' order.id %}" method="post">
+    {% csrf_token %}
+    {% for drink in order.drink_set.all %}
+    <input type="checkbox" name="placed" id="placed{{ forloop.counter }}" value="{{ drink.id }}" checked"{% if drink.placed %} checked {% else %} unchecked {% endif %}"/>
+        <label for="placed{{ forloop.counter }}">{{drink.type_of_drink}}</label><br/>
+    {% endfor %}
+
+    <input type="submit" value="Placed" />
+</form>
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+html { 
+    background: url(images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+#title{
+    margin-left: 30px;
+}
+
+h1{
+    font-size:72px;
+    color:white;
+    font-family: "Lucida Console", Monaco, monospace;
+    letter-spacing:-2px;
+}
+ 
+
+#main{
+    align: center;
+    margin:30px;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.4;
+    min-height: 750px;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+

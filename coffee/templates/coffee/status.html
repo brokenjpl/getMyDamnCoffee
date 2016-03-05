@@ -1,0 +1,8 @@
+<h2>{{ order.description_text }}</h2>
+
+<ul>
+{% for choice in order.drink_set.all %}
+<li>{{choice.type_of_drink}} : {% if choice.placed %} Placed {% else %} Not Placed {% endif %}
+{% endfor %}
+</ul>
+
