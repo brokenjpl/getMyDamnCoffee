@@ -1,9 +1,23 @@
-html { 
+html {
     background: url(images/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
      background-size: cover;
+    font-family: Arial;
+}
+
+body a{
+    color: #62310e;
+    text-decoration: none;
+}
+
+body a:visited{
+    color: #62310e;
+}
+
+body a:hover{
+    text-decoration: underline;
 }
 
 #title{
@@ -15,6 +29,7 @@ h1{
     color:white;
     font-family: "Lucida Console", Monaco, monospace;
     letter-spacing:-2px;
+    margin: 0px;
 }
  
 
@@ -22,9 +37,16 @@ h1{
     align: center;
     margin:30px;
     padding: 20px;
-    background-color: white;
-    opacity: 0.4;
+    background-color:rgba(255, 255, 2555, 0.6);
     min-height: 750px;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
+#top_header{
+    text-align: right;
+    color: #ffffff;
+}
+
+#top_header a{
+    text-align: right;
+    color: #ffffff;
+}

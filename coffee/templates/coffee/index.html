@@ -2,17 +2,8 @@
 
 {% block content %}
 
+    <h2>You want an easy way to keep track of group coffee?!</h2>
 
-    <h2>Here are the orders on your list:</h2>
-
-{% if latest_order_list %}
-    <ul>
-    {% for order in latest_order_list %}
-    <li><a href="{% url 'coffee:detail' order.id %}">{{order.description_text}}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>>No order were made.</p>
-{% endif %}
+<p>Well, tabarnack, you've come to the right place!</p>
 
 {% endblock content %}

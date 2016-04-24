@@ -7,7 +7,14 @@
     </head>
 
     <body>
-        
+
+        <div id="top_header">
+            {% if user.is_authenticated %}
+                Hi {{ request.user.username }}! (<a href="{% url 'coffee:logout' %}?next={%  url 'coffee:login' %}">logout</a>)
+            {% else %}
+                <a href="{% url 'coffee:login' %}">Login</a>
+            {% endif %}
+        </div>
         <div id="title">
             <h1>getMyDamnCoffee()</h1>
         </div>
